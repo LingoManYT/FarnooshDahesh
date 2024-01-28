@@ -27,12 +27,12 @@ export default async function Home(params) {
     })
       .then(res => {
         if (res.status === 200 && res.data.ok) {
-          Data = jwt.verify(res.data.Data, process.env.SECRET)
+          return Data = jwt.verify(res.data.Data, process.env.SECRET)
         }else {
-          Error = res.data.Message
+          return Error = res.data.Message
         }
       })
-      .catch(err => { Error = err })
+      .catch(err => { return Error = err })
   }
   await GetProjects()
   return (
