@@ -1,0 +1,122 @@
+.contact-container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px 0px 0px;
+    gap: 40px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.5s;
+    transform: translateY(10px);
+    z-index: -1;
+}
+
+.active {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+}
+
+.contact-container h1 {
+    color: #FFF;
+
+    /* H 01 */
+    /* font-size: 100px; */
+    font-size: 6dvw;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100px;
+    /* 100% */
+    letter-spacing: -3px;
+}
+
+.contact-container span {
+    width: 269px;
+    height: 20px;
+    background-color: #FFF;
+}
+
+.contact-container p {
+    width: 550px;
+    color: #FFF;
+
+    /* Body 01 */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.contact-container .contact-way-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-container .contact-way-container .email-container {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.contact-container .contact-way-container .email-container p {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+
+
+.contact-container .contact-way-container .phone-container {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.contact-container .contact-way-container .phone-container p {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+
+
+@media screen and (max-width: 990px) {
+    .contact-container {
+        padding: 0px;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .contact-container h1 {
+        font-size: 50px;
+    }
+
+    .contact-container p {
+        width: 100%;
+    }
+
+    .contact-container span {
+        width: 103px;
+        height: 15px;
+    }
+    .contact-container .contact-way-container .phone-container {
+        width: 100%;
+    }
+    .contact-container .contact-way-container .email-container {
+        width: 100%;
+    }
+    .contact-container h1 {
+        line-height: normal;
+    }
+}

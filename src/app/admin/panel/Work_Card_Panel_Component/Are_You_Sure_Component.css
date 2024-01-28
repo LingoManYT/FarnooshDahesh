@@ -1,0 +1,68 @@
+.are-you-sure-background {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100dvw;
+    height: 100dvh;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.are-you-sure-background .ask-container {
+    width: 20%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+}
+
+.are-you-sure-background .ask-container p {
+    width: 100%;
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.are-you-sure-background .ask-container .yes-no-buttons-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    gap: 10px;
+}
+
+.are-you-sure-background .ask-container .yes-no-buttons-container .yes-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    background-color: rgb(219, 0, 0);
+    cursor: pointer;
+
+}
+.are-you-sure-background .ask-container .yes-no-buttons-container .yes-button:hover {
+    opacity: 0.8;
+}
+.are-you-sure-background .ask-container .yes-no-buttons-container .yes-button:active {
+    opacity: 0.5;
+}
+.are-you-sure-background .ask-container .yes-no-buttons-container .no-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    background-color: #fff;
+}
+.are-you-sure-background .ask-container .yes-no-buttons-container .no-button:hover {
+    opacity: 0.8;
+}
+.are-you-sure-background .ask-container .yes-no-buttons-container .no-button:active {
+    opacity: 0.5;
+}
