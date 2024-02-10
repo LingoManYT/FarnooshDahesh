@@ -11,7 +11,7 @@ async function Work_Section_Component(params) {
     var Data
     var Error
     const GetProjects = async () => {
-        await axios.get('http://api.farnooshdahesh.com/projects', {
+        await axios.get('https://api.farnooshdahesh.com/projects', {
             headers: {
                 Authorization: process.env.TOKEN
             }
