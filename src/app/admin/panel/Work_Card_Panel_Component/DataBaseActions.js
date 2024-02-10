@@ -3,7 +3,7 @@ import axios from "axios"
 
 export async function DeleteProject(UUID) {
     var Error
-    await axios.put('http://api.farnooshdahesh.com/delete-project', {
+    await axios.put('https://api.farnooshdahesh.com/delete-project', {
         Project_UUID: UUID
     }, {
         headers: {
