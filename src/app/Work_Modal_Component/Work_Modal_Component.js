@@ -11,7 +11,7 @@ async function Work_Modal_Component({ work }) {
     var Data
     var Error
     const GetProject = async () => {
-        await axios.get(`http://localhost:3001/api/project?work=${work}`, {
+        await axios.get(`http://api.farnooshdahesh.com/project?work=${work}`, {
             headers: {
                 Authorization: process.env.TOKEN
             }

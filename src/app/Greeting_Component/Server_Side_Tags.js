@@ -15,7 +15,7 @@ function Server_Side_Tags() {
                 <h2>Hi, I am Farnoosh</h2>
                 <h1>Product Designer</h1>
                 <h2>Based in Sweden.</h2>
-                <a href='http://localhost:3001/Assets/Resume.pdf' download className='download-cv-button'>Download CV</a>
+                <a href='http://api.farnooshdahesh.com/Assets/Resume.pdf' download className='download-cv-button'>Download CV</a>
             </section>
             <div className='picture-container'>
                 <Image src={Person_Image} alt='person-image' />

@@ -20,7 +20,7 @@ export default async function Home(params) {
   var Data
   var Error
   const GetProjects = async () => {
-    await axios.get('http://localhost:3001/api/projects', {
+    await axios.get('http://api.farnooshdahesh.com/projects', {
       headers: {
         Authorization: process.env.TOKEN
       }

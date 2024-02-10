@@ -36,6 +36,7 @@ function Modal_Form({ TOKEN }) {
 
     const AddNewProject = async (e) => {
         e.preventDefault()
+        console.log("launched")
         const Data = new FormData()
         Data.append("Project_Type", e.target.project_type_input.value)
         Data.append("Project_Name", e.target.project_name_input.value)
@@ -48,16 +49,18 @@ function Modal_Form({ TOKEN }) {
 
         var SectionsImages = []
         var SectionsObject = []
-        Sections.map((Item, Key) => {
-            const ImageName = Item.Image.name.split('.')
-            const NewName = 'image-' + Key + '.' + ImageName[ImageName.length - 1]
-            const ImageModifiedName = new File([Item.Image], NewName)
-            SectionsImages.push(ImageModifiedName)
-            Item.Image = NewName
-            SectionsObject.push(Item)
-        })
+        if (Sections) {
+            Sections.map((Item, Key) => {
+                const ImageName = Item.Image.name.split('.')
+                const NewName = 'image-' + Key + '.' + ImageName[ImageName.length - 1]
+                const ImageModifiedName = new File([Item.Image], NewName)
+                SectionsImages.push(ImageModifiedName)
+                Item.Image = NewName
+                SectionsObject.push(Item)
+            })
+        }
 
-        await axios.post('http://localhost:3001/api/create-project', {
+        await axios.post('https://api.farnooshdahesh.com/create-project', {
             Project_Type: e.target.project_type_input.value,
             Project_Name: e.target.project_name_input.value,
             Project_Main_Description: e.target.project_main_description_input.value,
@@ -71,6 +74,7 @@ function Modal_Form({ TOKEN }) {
             }
         })
             .then(res => {
+                console.log(res)
                 if (res.status === 200 && res.data.ok) {
                     Router.replace("/admin/panel")
                 } else {
@@ -79,10 +83,6 @@ function Modal_Form({ TOKEN }) {
             })
             .catch(err => { SetError(err) })
     }
-
-    useEffect(() => {
-        console.log(Sections)
-    }, [Sections])
     return (
         <form encType='multipart/form-data' onSubmit={(e) => { AddNewProject(e) }} className='add-new-project-modal-container'>
             <header className='modal-header-container'>
@@ -90,6 +90,7 @@ function Modal_Form({ TOKEN }) {
                     <Image src={Check_Icon} alt='check-icon' />
                     <p>Apply</p>
                 </button>
+                {Error ? <p>{Error ? Error : null}</p> : null}
             </header>
             <section className='modal-main-section-container'>
                 <div className='modal-main-child-container'>

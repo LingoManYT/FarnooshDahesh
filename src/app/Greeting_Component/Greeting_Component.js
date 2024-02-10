@@ -11,7 +11,6 @@ function Greeting_Component() {
     useEffect(() => {
         window.addEventListener('scroll', () => {
             const Scroll_Position = document.documentElement.scrollTop
-            console.log(Scroll_Position)
             const ContainerElement = document.getElementById('greeting-component-container')
             if (Scroll_Position >= 0 && Scroll_Position < 300) {
                 ContainerElement.classList.remove("deactive")
