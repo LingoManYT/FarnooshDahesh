@@ -11,7 +11,7 @@ function Header() {
         <header>
             <section className='header-elements-container'>
                 <Image src={Header_Logo} className='header-logo' alt='farnoosh-dahesh-logo' style={{ width: 'auto', height: 'auto' }}/>
-                <a href='https://api.farnooshdahesh.com/Assets/Resume.pdf' download className='download-cv-button'>Download CV</a>
+                <a href='https://api.farnooshdahesh.com/Assets/Resume.pdf' target='_blank' download className='download-cv-button'>Download CV</a>
                 <Side_Menu_Component />
             </section>
         </header>
